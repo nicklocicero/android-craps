@@ -3,4 +3,10 @@
   <string name="roll">~Roll~</string>
   <string name="status_pattern">First %1$s\nLast: %2$s\nResult after %3$d rolls: %4$s</string>
   <string name="simple_status_pattern">Roll: %1$s\nResult: %2$s</string>
-</resources>
+  <string name="dice_sum_pattern">= %1$d</string>
+  <string name="play_button">Play</string>
+  <string name="stop">Stop</string>
+  <string name="run">Run</string>
+  <string name="reset">Reset</string>
+  <string name="tally_pattern">%1$,d wins / %2$,d plays = %3$.3f%%</string>
+  </resources>

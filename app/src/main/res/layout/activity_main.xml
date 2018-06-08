@@ -8,12 +8,22 @@
   tools:context="edu.cnm.deepdive.nicklocicero.android_craps.MainActivity">
 
   <TextView
-    android:id="@+id/game_status"
+    android:id="@+id/tally"
     android:layout_width="wrap_content"
-    android:layout_height="0dp"
-    android:padding="50dp"
-    android:textAlignment="center"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/layout_margin"
     app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:textAlignment="center"
+    />
+
+  <ListView
+    android:id="@+id/game_rolls"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:textAlignment="center"
+    app:layout_constraintTop_toBottomOf="@id/tally"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     app:layout_constraintBottom_toTopOf="@+id/play_game"
@@ -22,14 +32,42 @@
 
   <Button
     android:id="@+id/play_game"
+    android:layout_margin="@dimen/layout_margin"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="@string/roll"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    android:fontFamily="monospace"
-    android:background="@color/green"
+    app:layout_constraintRight_toLeftOf="@+id/play_continuously"
+    android:drawableStart="@drawable/ic_skip_next_black_24dp"
+    android:text="@string/play_button"
     />
+
+  <ToggleButton
+    android:id="@+id/play_continuously"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/layout_margin"
+    android:padding="@dimen/button_padding"
+    android:drawablePadding="@dimen/icon_padding"
+    android:drawableStart="@drawable/ic_fast_forward_black_24dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintRight_toLeftOf="@+id/reset_game"
+    app:layout_constraintLeft_toRightOf="@id/play_game"
+    android:textOn="@string/run"
+    android:textOff="@string/stop"/>
+
+    <Button
+      android:id="@+id/reset_game"
+      android:layout_margin="@dimen/layout_margin"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/button_padding"
+      android:drawablePadding="@dimen/icon_padding"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintLeft_toRightOf="@+id/play_continuously"
+      android:drawableStart="@drawable/ic_autorenew_black_24dp"
+      android:text="@string/reset"
+      />
 
 </android.support.constraint.ConstraintLayout>
