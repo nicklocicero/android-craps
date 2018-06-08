@@ -4,19 +4,22 @@ This is an Android app of a Monte Carlo simulation for the casino game [craps](h
 
 ![craps-table-image](craps.png)
 
-The simulation keeps track of three things:
+### The simulation tracks:
 
 - wins 
 - games played
 - the percentage of games won
 
-It features three main buttons in its GUI interface:
+### GUI interface buttons:
 
 - Play, rolls for one game
 - Run, turns continuous games on or off, to play as many games as possible while turned on
 - Reset, resets the counter of wins, games, and percent
 
-The GUI features colors (green for win and red for loss), svg icon graphics, and a list of rolls for the most recent game played.
+### GUI features:
+  - colors (green for win and red for loss)
+  - svg icon graphics
+  - a list of rolls with dice images for the most recent game played
 
 #### TO-DO
 
